@@ -157,11 +157,15 @@ DJOSER = {
     'SEND_CONFIRMATION_EMAIL': True, # send confirmation email
     'SET_USERNAME_RETYPE' : True,
     'SET_PASSWORD_RETYPE' : True,
-    'PASSWORD_REST_CONFIRM_URL' : 'password/reset/confirm/{uid}/{token}',
-    'USERNAME_REST_CONFIRM_URL' : 'email/reset/confirm/{uid}/{token}',
+    'PASSWORD_RESET_CONFIRM_URL' : 'password/reset/confirm/{uid}/{token}',
+    'USERNAME_RESET_CONFIRM_URL' : 'email/reset/confirm/{uid}/{token}',
+    'PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND' : True,
     'ACTIVATION_URL':'activate/{uid}/{token}',
-    'SEND_ACTIVIVATION_EAMIL':True,
+    'SEND_ACTIVATION_EMAIL':True,
     'SERIALIZERS' :{
+        'user_create' : 'accounts.serializers.UserRegisterSerializer',
+        'user' : 'accounts.serializers.UserRegisterSerializer',
+        'user_delete' : 'djoser.serializers.UserDeleteSerializer'
     }
 }
 

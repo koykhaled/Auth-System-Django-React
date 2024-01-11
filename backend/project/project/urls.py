@@ -4,6 +4,7 @@ from django.views.generic import TemplateView # for react side
 urlpatterns = [
     path('auth/',include('djoser.urls')), # to handle login , register , logout ...etc
     path('auth/',include('djoser.urls.jwt')), # to handle tokens 
+    path('account/',include('accounts.urls')),
 ]
 
 
