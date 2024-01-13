@@ -13,6 +13,6 @@ from rest_framework.permissions import IsAuthenticated
 
 class TestView(APIView):
     serializer_class = None
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     def get(self,request):
         return Response("khaled is here")
